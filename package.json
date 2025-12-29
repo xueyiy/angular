@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "NODE_OPTIONS=--openssl-legacy-provider ng serve",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider ng build",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider ng build --configuration production",
+    "build:dev": "NODE_OPTIONS=--openssl-legacy-provider ng build",
+    "start:prod": "serve -s dist/RentACar-FrontEnd -l ${PORT:-4200}",
     "test": "NODE_OPTIONS=--openssl-legacy-provider ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -29,6 +31,7 @@
     "ng-multiselect-dropdown": "^0.2.14",
     "ngx-toastr": "^13.2.1",
     "rxjs": "~6.6.0",
+    "serve": "^14.2.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
   },
